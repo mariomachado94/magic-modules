@@ -1,0 +1,12 @@
+resource "google_cloudbuild_trigger" "<%= ctx[:primary_resource_id] %>" {
+  location = "us-central1"
+
+  repository_event_config {
+    repository = "projects/mmachado-cloudbuild-experiment/locations/us-central1/connections/my-conn/repositories/my-repo"
+    push {
+      branch = "feature-.*"
+    }
+  }
+
+  filename = "cloudbuild.yaml"
+}

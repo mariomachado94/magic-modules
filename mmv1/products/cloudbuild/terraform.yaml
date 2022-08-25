@@ -49,6 +49,9 @@ overrides: !ruby/object:Overrides::ResourceOverrides
       - !ruby/object:Provider::Terraform::Examples
         name: "cloudbuild_trigger_manual"
         primary_resource_id: "manual-trigger"
+      - !ruby/object:Provider::Terraform::Examples
+        name: "cloudbuild_trigger_repo"
+        primary_resource_id: "repo-trigger"
 
     properties:
       id: !ruby/object:Overrides::Terraform::PropertyOverride
