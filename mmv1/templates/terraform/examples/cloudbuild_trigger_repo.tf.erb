@@ -1,4 +1,9 @@
+provider "google" {
+  user_project_override = true
+}
+
 resource "google_cloudbuild_trigger" "<%= ctx[:primary_resource_id] %>" {
+  provider = google
   location = "us-central1"
 
   repository_event_config {
